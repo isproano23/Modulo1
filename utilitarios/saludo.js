@@ -8,8 +8,12 @@ saludar = function () {
   let estatura;
   estatura = recuperarFloat("txtestatura");
 
-  let mensajeBienvenida= "BIENVENIDO "  + nombre  +  apellido ;
+  let mensajeBienvenida= " BIENVENIDO "  + nombre  +  apellido ;
   mostrarTexto("lblResultado",mensajeBienvenida);
+
+   msostrarImagen("imgSaludo","./imagenes/hola.gif")
+
+
 };
 
 recuperarTexto = function (idcomponente) {
@@ -26,6 +30,14 @@ mostrarTexto = function (idcomponente, mensaje) {
   componente = document.getElementById(idcomponente);
   componente.innerText = mensaje;
 };
+
+ msostrarImagen=function(idcomponente,rutaImagen){
+
+    let componente
+    componente=document.getElementById(idcomponente)
+    componente.src=rutaImagen;
+    
+ }
 
 recuperarInt = function (idcomponente) {
   let valorCaja;
