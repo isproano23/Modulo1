@@ -5,8 +5,11 @@ saludar = function () {
   apellido = recuperarTexto("txtapellido");
   let edad;
   edad = recuperarInt("txtedad");
-  let estatura
-  estatura=recuperarFloat("txtestatura")
+  let estatura;
+  estatura = recuperarFloat("txtestatura");
+
+  let mensajeBienvenida= "BIENVENIDO "  + nombre  +  apellido ;
+  mostrarTexto("lblResultado",mensajeBienvenida);
 };
 
 recuperarTexto = function (idcomponente) {
@@ -16,6 +19,12 @@ recuperarTexto = function (idcomponente) {
   valorIngresado = componente.value;
 
   return valorIngresado;
+};
+
+mostrarTexto = function (idcomponente, mensaje) {
+  let componente;
+  componente = document.getElementById(idcomponente);
+  componente.innerText = mensaje;
 };
 
 recuperarInt = function (idcomponente) {
